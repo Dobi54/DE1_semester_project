@@ -1,10 +1,9 @@
 # DE1_semester_project
 Team members
 
-    Member 1 (responsible for ...)
-    Member 2 (responsible for ...)
-    Member 3 (responsible for ...)
-    Member 4 (responsible for ...)
+    David Dobiáš (responsible for ...)
+    Tomáš Pokorný (responsible for ...)
+    Tomáš Rosa (responsible for ...)
 
 Abstract
 
