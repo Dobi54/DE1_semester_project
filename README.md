@@ -1,9 +1,9 @@
 # DE1_semester_project
-Team members
+Členové týmu
 
-    David Dobiáš (responsible for ...)
-    Tomáš Pokorný (responsible for ...)
-    Tomáš Rosa (responsible for ...)
+    David Dobiáš - vedoucí týmu, hlavní programátor
+    Tomáš Pokorný - pomocný programátor, poster maker
+    Tomáš Rosa - pomocný programátor, video maker
 
 Abstract
 
