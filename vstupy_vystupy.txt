@@ -1,0 +1,27 @@
+Vstupy
+CLK100MHz
+BTNC-reset času
+BTND-reset skóre
+BTNL-přidání bodu týmu 1
+BTNR-přidání bodu týmu 2
+SW(0)-start/stop čas
+
+Výstupy
+CA
+CB
+CC
+CD
+CE
+CF
+CG
+DP
+AN (7 downto 0)
+LED17_R-došel čas(konec třetiny)
+LED17_G-čas běží
+LED17_B-čas je zastaven
+
+Komponenty
+bin2seg
+clock_enable
+game_timer
+score_counter
