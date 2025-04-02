@@ -19,6 +19,10 @@ The main contributions of the project are:
 
 [Link to A3 project poster.]
 
+![image](https://github.com/user-attachments/assets/3237eec8-aa4b-45cb-8a47-444045e36559)
+
+
+
 [Optional: Link to your short video presentation.]
 Hardware description of demo application
 
