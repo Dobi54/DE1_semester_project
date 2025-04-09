@@ -25,6 +25,7 @@ architecture Behavioral of game_timer is
     signal min_tens  : integer range 0 to 2 := 0;
 
     signal running   : std_logic := '0';
+    signal time_runout : std_logic := '0';
 
 begin
 
@@ -32,7 +33,7 @@ begin
     begin
         if rising_edge(clk) then
             if reset = '1' then
-                -- NastavÃ­me Äas zpÄ›t na 20:00
+                -- Nastavíme ?as zp?t na 20:00
                 sec_unit <= 0;
                 sec_tens <= 0;
                 min_unit <= 0;
@@ -41,22 +42,22 @@ begin
                 time_end <= '0';
 
             elsif en = '1' then
-                -- ZmÄ›na stavu podle start_stop
+                -- Zm?na stavu podle start_stop
                 if start_stop = '1' then
                     running <= '1';
                 else
                     running <= '0';
                 end if;
 
-                -- Pokud bÄ›Å¾Ã­ ÄasovaÄ a jeÅ¡tÄ› nevyprÅ¡el
-                if running = '1' and time_end = '0' then
+                -- Pokud b?í ?asova? a ješt? nevypršel
+                if running = '1' and time_runout = '0' then
 
-                    -- KdyÅ¾ dosÃ¡hneme 00:00
+                    -- Kdy dosáhneme 00:00
                     if sec_unit = 0 and sec_tens = 0 and min_unit = 0 and min_tens = 0 then
-                        time_end <= '1';
+                        time_runout <= '1';
                         running  <= '0';
 
-                    -- Jinak poÄÃ­tÃ¡me dolÅ¯
+                    -- Jinak po?ítáme dol?
                     else
                         if sec_unit > 0 then
                             sec_unit <= sec_unit - 1;
@@ -82,9 +83,10 @@ begin
         end if;
     end process;
 
-    -- VÃ½stupy
+    -- Vıstupy
     time_run   <= running;
     time_pause <= not running;
+    time_end <= time_runout;
     
     sec_out_unit <= std_logic_vector(to_unsigned(sec_unit, 4));
     sec_out_tens <= std_logic_vector(to_unsigned(sec_tens, 3));
