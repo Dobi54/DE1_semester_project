@@ -8,6 +8,10 @@ entity bin2seg is
 		   bin_sec_tens : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_min_unit : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_min_tens : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_point_team1_unit : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_point_team1_tens : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_point_team2_unit : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_point_team2_tens : in STD_LOGIC_VECTOR (3 downto 0);
 		   position : in STD_LOGIC_VECTOR(3 downto 0);
            seg : out STD_LOGIC_VECTOR (6 downto 0);
 		   an : out STD_LOGIC_VECTOR (7 downto 0)
@@ -38,7 +42,24 @@ begin
 			elsif (position = x"4") then 
 				bin <= bin_sec_unit;
 				an <= b"1110_1111";
+			
+			elsif (position = x"3") then 
+				bin <= bin_point_team1_tens;
+				an <= b"1111_0111";
 				
+			elsif (position = x"2") then 
+				bin <= bin_point_team1_unit;
+				an <= b"1111_1011";
+			
+			elsif (position = x"1") then 
+				bin <= bin_point_team2_tens;
+				an <= b"1111_1101";
+			
+			else 
+				bin <= bin_point_team2_unit;
+				an <= b"1111_1110";
+			end if;
+			
 				case bin is
 					when x"0" =>
 						seg <= "0000001";
@@ -74,7 +95,6 @@ begin
 						seg <= "1111111";
 					
 				end case;
-			end if;
         end if;
     end process;
 
