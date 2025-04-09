@@ -77,6 +77,15 @@ architecture Behavioral of top_level is
     
     signal sig_50Hz   : std_logic;
     signal sig_1Hz   : std_logic;
+    
+    signal sig_sec_unit : std_logic_vector;
+    signal sig_sec_tens : std_logic_vector;
+    signal sig_min_unit : std_logic_vector;
+    signal sig_min_tens : std_logic_vector;
+    
+    signal sig_position : std_logic_vector;
+    
+    signal sig_an : std_logic_vector;
 			
 begin
 
@@ -94,29 +103,47 @@ port map (
 			
 TIMER : game_timer
 port map (
-   <port_name> => <signal_name>,
-   <other ports>...
+    start_stop => SW,
+    clk => CLK100MHZ,
+    reset => BTNC,
+    en => sig_1Hz,
+    time_run => LED17_G,
+    time_pause => LED17_B,
+    time_end => LED17_R,
+    sec_out_unit => sig_sec_unit,
+    sec_out_tens => sig_sec_tens,
+    min_out_unit => sig_min_unit,
+    min_out_tens => sig_min_tens
 );
 			
-<instance_name> : <component_name>
-generic map (
-   <generic_name> => <value>,
-   <other generics>...
-)
+POSITION : position_counter
 port map (
-   <port_name> => <signal_name>,
-   <other ports>...
+    clk => CLK100MHZ,
+    en => sig_50Hz,
+    rst => BTNC,
+    position => sig_position
+   
 );
 			
-<instance_name> : <component_name>
-generic map (
-   <generic_name> => <value>,
-   <other generics>...
-)
+DISPLAY : bin2seg
 port map (
-   <port_name> => <signal_name>,
-   <other ports>...
+    clear => BTNC,
+    bin_sec_unit => sig_sec_unit,
+	bin_sec_tens => sig_sec_tens,
+	bin_min_unit => sig_min_unit,
+	bin_min_tens => sig_min_tens,
+	position => sig_position,
+    seg(6) => CA,
+    seg(5) => CB,
+    seg(4) => CC,
+    seg(3) => CD,
+    seg(2) => CE,
+    seg(1) => CF,
+    seg(0) => CG,
+    an => sig_an
 );
-			
+
+DP <= '1';			
+AN(7 downto 0) <= sig_an;
 												
 end Behavioral;
