@@ -28,10 +28,10 @@ architecture Behavioral of top_level is
     	N_PERIODS_1Hz : integer := 100_000_000 --! Default number of clk periodes to generate one pulse
     );
     port (
-        clk      : in  std_logic; --! Hlavní hodinový signál 100 MHz
+        clk      : in  std_logic; --! HlavnÃ­ hodinovÃ½ signÃ¡l 100 MHz
         rst      : in  std_logic; --! Synchronous reset
-        clk1Hz   : out std_logic; --! Výstupní signál 1 Hz
-        clk50Hz  : out std_logic  --! Výstupní signál 50 Hz
+        clk1Hz   : out std_logic; --! VÃ½stupnÃ­ signÃ¡l 1 Hz
+        clk50Hz  : out std_logic  --! VÃ½stupnÃ­ signÃ¡l 50 Hz
     );
     end component;
 			
@@ -74,6 +74,22 @@ architecture Behavioral of top_level is
 		   an : out STD_LOGIC_VECTOR (7 downto 0)
     );
     end component;
+	
+	component bin2seg
+    port ( clear : in STD_LOGIC;
+           bin_sec_unit : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_sec_tens : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_min_unit : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_min_tens : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_point_team1_unit : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_point_team1_tens : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_point_team2_unit : in STD_LOGIC_VECTOR (3 downto 0);
+		   bin_point_team2_tens : in STD_LOGIC_VECTOR (3 downto 0);
+		   position : in STD_LOGIC_VECTOR(3 downto 0);
+           seg : out STD_LOGIC_VECTOR (6 downto 0);
+		   an : out STD_LOGIC_VECTOR (7 downto 0)
+    );
+    end component;
     
     signal sig_50Hz   : std_logic;
     signal sig_1Hz   : std_logic;
@@ -84,6 +100,11 @@ architecture Behavioral of top_level is
     signal sig_min_tens : std_logic_vector;
     
     signal sig_position : std_logic_vector;
+	
+	signal sig_team1_unit : std_logic_vector;
+	signal sig_team1_tens : std_logic_vector;
+	signal sig_team2_unit : std_logic_vector;
+	signal sig_team2_tens : std_logic_vector;
     
     signal sig_an : std_logic_vector;
 			
@@ -124,6 +145,18 @@ port map (
     position => sig_position
    
 );
+
+SCORE : score_counter
+port map (
+    clk => CLK100MHZ,
+    pointup_team1 => BTNL,
+    pointup_team2 => BTNR,
+    rst => BTND,
+    score_team1_unit => sig_team1_unit,
+    score_team1_tens => sig_team1_tens,
+    score_team2_unit => sig_team2_unit,
+    score_team2_tens => sig_team2_tens
+);
 			
 DISPLAY : bin2seg
 port map (
@@ -132,6 +165,10 @@ port map (
 	bin_sec_tens => sig_sec_tens,
 	bin_min_unit => sig_min_unit,
 	bin_min_tens => sig_min_tens,
+	bin_point_team1_unit => sig_team1_unit,
+	bin_point_team1_tens => sig_team1_tens,
+	bin_point_team2_unit => sig_team2_unit,
+	bin_point_team2_tens => sig_team2_tens,
 	position => sig_position,
     seg(6) => CA,
     seg(5) => CB,
