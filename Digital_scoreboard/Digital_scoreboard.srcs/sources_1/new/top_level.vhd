@@ -69,18 +69,6 @@ architecture Behavioral of top_level is
 		   bin_sec_tens : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_min_unit : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_min_tens : in STD_LOGIC_VECTOR (3 downto 0);
-		   position : in STD_LOGIC_VECTOR(3 downto 0);
-           seg : out STD_LOGIC_VECTOR (6 downto 0);
-		   an : out STD_LOGIC_VECTOR (7 downto 0)
-    );
-    end component;
-	
-	component bin2seg
-    port ( clear : in STD_LOGIC;
-           bin_sec_unit : in STD_LOGIC_VECTOR (3 downto 0);
-		   bin_sec_tens : in STD_LOGIC_VECTOR (3 downto 0);
-		   bin_min_unit : in STD_LOGIC_VECTOR (3 downto 0);
-		   bin_min_tens : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_point_team1_unit : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_point_team1_tens : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_point_team2_unit : in STD_LOGIC_VECTOR (3 downto 0);
@@ -90,23 +78,35 @@ architecture Behavioral of top_level is
 		   an : out STD_LOGIC_VECTOR (7 downto 0)
     );
     end component;
+	
+	component score_counter
+    port ( clk              : in  STD_LOGIC;  -- hodinový signál
+        pointup_team1    : in  STD_LOGIC;  -- přidání bodu týmu 1
+        pointup_team2    : in  STD_LOGIC;  -- přidání bodu týmu 2
+        rst              : in  STD_LOGIC;  -- reset skóre
+        score_team1_unit : out STD_LOGIC_VECTOR(3 downto 0); -- jednotky tým 1
+        score_team1_tens : out STD_LOGIC_VECTOR(3 downto 0); -- desítky tým 1
+        score_team2_unit : out STD_LOGIC_VECTOR(3 downto 0); -- jednotky tým 2
+        score_team2_tens : out STD_LOGIC_VECTOR(3 downto 0)  -- desítky tým 2
+    );
+    end component;
     
     signal sig_50Hz   : std_logic;
     signal sig_1Hz   : std_logic;
     
-    signal sig_sec_unit : std_logic_vector;
-    signal sig_sec_tens : std_logic_vector;
-    signal sig_min_unit : std_logic_vector;
-    signal sig_min_tens : std_logic_vector;
+    signal sig_sec_unit : std_logic_vector(3 downto 0);
+    signal sig_sec_tens : std_logic_vector(3 downto 0);
+    signal sig_min_unit : std_logic_vector(3 downto 0);
+    signal sig_min_tens : std_logic_vector(3 downto 0);
     
-    signal sig_position : std_logic_vector;
+    signal sig_position : std_logic_vector(3 downto 0);
 	
-	signal sig_team1_unit : std_logic_vector;
-	signal sig_team1_tens : std_logic_vector;
-	signal sig_team2_unit : std_logic_vector;
-	signal sig_team2_tens : std_logic_vector;
+	signal sig_team1_unit : std_logic_vector(3 downto 0);
+	signal sig_team1_tens : std_logic_vector(3 downto 0);
+	signal sig_team2_unit : std_logic_vector(3 downto 0);
+	signal sig_team2_tens : std_logic_vector(3 downto 0);
     
-    signal sig_an : std_logic_vector;
+    signal sig_an : std_logic_vector(7 downto 0);
 			
 begin
 
