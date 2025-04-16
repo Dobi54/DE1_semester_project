@@ -12,9 +12,9 @@ entity game_timer is
         time_pause    : out STD_LOGIC;
         time_end      : out STD_LOGIC;
         sec_out_unit  : out STD_LOGIC_VECTOR (3 downto 0);
-        sec_out_tens  : out STD_LOGIC_VECTOR (2 downto 0);
+        sec_out_tens  : out STD_LOGIC_VECTOR (3 downto 0);
         min_out_unit  : out STD_LOGIC_VECTOR (3 downto 0);
-        min_out_tens  : out STD_LOGIC_VECTOR (1 downto 0)
+        min_out_tens  : out STD_LOGIC_VECTOR (3 downto 0)
     );
 end game_timer;
 
@@ -33,7 +33,7 @@ begin
     begin
         if rising_edge(clk) then
             if reset = '1' then
-                -- Nastavíme ?as zp?t na 20:00
+                -- NastavÃ­me ?as zp?t na 20:00
                 sec_unit <= 0;
                 sec_tens <= 0;
                 min_unit <= 0;
@@ -49,15 +49,15 @@ begin
                     running <= '0';
                 end if;
 
-                -- Pokud b?ží ?asova? a ješt? nevypršel
+                -- Pokud b?Å¾Ã­ ?asova? a jeÅ¡t? nevyprÅ¡el
                 if running = '1' and time_runout = '0' then
 
-                    -- Když dosáhneme 00:00
+                    -- KdyÅ¾ dosÃ¡hneme 00:00
                     if sec_unit = 0 and sec_tens = 0 and min_unit = 0 and min_tens = 0 then
                         time_runout <= '1';
                         running  <= '0';
 
-                    -- Jinak po?ítáme dol?
+                    -- Jinak po?Ã­tÃ¡me dol?
                     else
                         if sec_unit > 0 then
                             sec_unit <= sec_unit - 1;
@@ -83,14 +83,14 @@ begin
         end if;
     end process;
 
-    -- Výstupy
+    -- VÃ½stupy
     time_run   <= running;
     time_pause <= not running;
     time_end <= time_runout;
     
     sec_out_unit <= std_logic_vector(to_unsigned(sec_unit, 4));
-    sec_out_tens <= std_logic_vector(to_unsigned(sec_tens, 3));
+    sec_out_tens <= std_logic_vector(to_unsigned(sec_tens, 4));
     min_out_unit <= std_logic_vector(to_unsigned(min_unit, 4));
-    min_out_tens <= std_logic_vector(to_unsigned(min_tens, 2));
+    min_out_tens <= std_logic_vector(to_unsigned(min_tens, 4));
 
 end Behavioral;
