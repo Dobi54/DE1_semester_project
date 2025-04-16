@@ -5,6 +5,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity top_level is
     Port ( CLK100MHZ : in STD_LOGIC;
            BTNC : in STD_LOGIC;
+           BTNL : in STD_LOGIC;
+           BTNR : in STD_LOGIC;
+           BTND : in STD_LOGIC;
            SW : in STD_LOGIC;
            CA : out STD_LOGIC;
            CB : out STD_LOGIC;
@@ -46,9 +49,9 @@ architecture Behavioral of top_level is
         time_pause    : out STD_LOGIC;
         time_end      : out STD_LOGIC;
         sec_out_unit  : out STD_LOGIC_VECTOR (3 downto 0);
-        sec_out_tens  : out STD_LOGIC_VECTOR (2 downto 0);
+        sec_out_tens  : out STD_LOGIC_VECTOR (3 downto 0);
         min_out_unit  : out STD_LOGIC_VECTOR (3 downto 0);
-        min_out_tens  : out STD_LOGIC_VECTOR (1 downto 0)
+        min_out_tens  : out STD_LOGIC_VECTOR (3 downto 0)
     );
     end component;
 			
@@ -73,7 +76,7 @@ architecture Behavioral of top_level is
 		   bin_point_team1_tens : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_point_team2_unit : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_point_team2_tens : in STD_LOGIC_VECTOR (3 downto 0);
-		   position : in STD_LOGIC_VECTOR(3 downto 0);
+		   position : in STD_LOGIC_VECTOR(2 downto 0);
            seg : out STD_LOGIC_VECTOR (6 downto 0);
 		   an : out STD_LOGIC_VECTOR (7 downto 0)
     );
@@ -99,7 +102,7 @@ architecture Behavioral of top_level is
     signal sig_min_unit : std_logic_vector(3 downto 0);
     signal sig_min_tens : std_logic_vector(3 downto 0);
     
-    signal sig_position : std_logic_vector(3 downto 0);
+    signal sig_position : std_logic_vector(2 downto 0);
 	
 	signal sig_team1_unit : std_logic_vector(3 downto 0);
 	signal sig_team1_tens : std_logic_vector(3 downto 0);
