@@ -12,7 +12,7 @@ entity bin2seg is
 		   bin_point_team1_tens : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_point_team2_unit : in STD_LOGIC_VECTOR (3 downto 0);
 		   bin_point_team2_tens : in STD_LOGIC_VECTOR (3 downto 0);
-		   position : in STD_LOGIC_VECTOR(3 downto 0);
+		   position : in STD_LOGIC_VECTOR(2 downto 0);
            seg : out STD_LOGIC_VECTOR (6 downto 0);
 		   an : out STD_LOGIC_VECTOR (7 downto 0)
     );
