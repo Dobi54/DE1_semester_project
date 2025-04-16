@@ -33,7 +33,7 @@ begin
     begin
         if rising_edge(clk) then
             if reset = '1' then
-                -- Nastavíme ?as zp?t na 20:00
+                -- Set time on 20:00
                 sec_unit <= 0;
                 sec_tens <= 0;
                 min_unit <= 0;
