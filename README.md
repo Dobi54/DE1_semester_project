@@ -20,7 +20,7 @@ The main contributions of the project are:
 [Link to A3 project poster.]
 
 
-![diagram drawio](https://github.com/user-attachments/assets/7eca844a-5ae6-4f46-ac60-3da5b53fc821)
+![Diagram drawio](https://github.com/user-attachments/assets/70d25635-9dca-4186-aba8-7d17cd1f660b)
 
 
 
