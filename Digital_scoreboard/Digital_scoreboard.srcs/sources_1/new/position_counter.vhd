@@ -13,7 +13,7 @@ end position_counter;
 
 architecture Behavioral of position_counter is
     signal sig_position         : integer range 0 to 7 := 7;
-    
+
 begin
 
     process(clk)
