@@ -24,7 +24,6 @@ architecture tb of tb_position_counter is
 
 begin
 
-    -- Pøipojení DUT
     dut: position_counter
         port map (
             clk      => clk,
@@ -33,7 +32,6 @@ begin
             position => position
         );
 
-    -- Generování hodinového signálu
     clk_process: process
     begin
         while true loop
@@ -44,16 +42,14 @@ begin
         end loop;
     end process;
 
-    -- Stimuly
     stim_proc: process
     begin
-        -- První reset
+
         rst <= '1';
         wait for period;
         rst <= '0';
         wait for period;
 
-        -- 3 kroky poèítání (napø. z 7 ? 6 ? 5 ? 4)
         for i in 1 to 3 loop
             en <= '1';
             wait for period;
@@ -61,13 +57,11 @@ begin
             wait for period;
         end loop;
 
-        -- Druhý reset
         rst <= '1';
         wait for period;
         rst <= '0';
         wait for period;
 
-        -- Pokraèujeme v poèítání (mìlo by zaèít znovu od 7)
         for i in 1 to 4 loop
             en <= '1';
             wait for period;
@@ -75,7 +69,6 @@ begin
             wait for period;
         end loop;
 
-        -- Konec simulace
         wait;
     end process;
 
