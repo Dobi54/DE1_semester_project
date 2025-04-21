@@ -12,6 +12,7 @@ Naším úkolem bylo implementovat herní časovač pro námi zvolený sport, sp
 # Popis Hardwaru naší implemantace
 
 Použíté vstupy:
+
     CLK100MHz - zabudovaný hodinový signál o frekvenci 100 MHz
     BTNC - tlačítko určené pro resetování času
     BTND - tlačítko určené pro resetování skóre
@@ -20,6 +21,7 @@ Použíté vstupy:
     SW(0) - přepínač určený pro stopování a pouštění času
 
 Použité výstupy:
+
     CA, CB, CC, CD, CE, CF, CG - výstupy určené pro spínání jednotlivých segmentý sedmisegmentového LED displeje
     DP - výstup určený pro vypnití desetinné tečky segmisegmentového displeje
     AN (7 downto 0) - výstupy určené pro spínání jednotlivých pozic sedmisegmentového displeje
