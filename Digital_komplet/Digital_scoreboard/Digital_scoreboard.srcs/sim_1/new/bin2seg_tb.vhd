@@ -41,7 +41,6 @@ architecture tb of tb_bin2seg is
 
 begin
 
-    -- Pøipojení DUT
     dut : bin2seg
         port map (
             clk                   => clk,
@@ -59,7 +58,6 @@ begin
             an                    => an
         );
 
-    -- Generování hodinového signálu
     clk_process : process
     begin
         loop
@@ -70,10 +68,8 @@ begin
         end loop;
     end process;
 
-    -- Stimulace
     stim_proc : process
     begin
-        -- Inicializace
         clear <= '1';
         bin_sec_unit         <= "0100"; -- 4
         bin_sec_tens         <= "0010"; -- 2
@@ -89,7 +85,6 @@ begin
         clear <= '0';
         wait for 50 ns;
 
-        -- Test jednotlivých pozic
         position <= "000";-- team2_unit
         bin_sec_unit         <= "0010"; -- 4
         bin_sec_tens         <= "0110"; -- 2
@@ -110,13 +105,11 @@ begin
         position <= "110"; wait for 100 ns; -- min_unit
         position <= "111"; wait for 100 ns; -- min_tens
 
-        -- Aktivace clear bìhem provozu
         clear <= '1';
         wait for 100 ns;
         clear <= '0';
         wait for 100 ns;
 
-        -- Zmìna vstupu a opìtovné testování jedné pozice
         bin_sec_unit <= "0001"; -- 1
         position <= "100"; -- sec_unit
         wait for 100 ns;
