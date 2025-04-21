@@ -65,7 +65,6 @@ begin
         end loop;
     end process;
 
-    -- EN 1 Hz (perioda 1 s, støídavì 0.5 s HIGH, 0.5 s LOW)
     en_process: process
     begin
         while true loop
@@ -76,7 +75,6 @@ begin
         end loop;
     end process;
 
-    -- Stimuly
     stim_proc: process
     begin
         -- Reset
@@ -84,20 +82,16 @@ begin
         wait for 20 ns;
         reset <= '0';
         wait for 50 ms;
-
-        -- Spustíme èasovaè
+            
         start_stop <= '1';
         wait for 1 sec;
 
-        -- Pauza
         start_stop <= '0';
         wait for 500 ms;
 
-        -- Znovu spuštìní
         start_stop <= '1';
         wait for 1 sec;
 
-        -- Konec simulace
         wait;
     end process;
 
