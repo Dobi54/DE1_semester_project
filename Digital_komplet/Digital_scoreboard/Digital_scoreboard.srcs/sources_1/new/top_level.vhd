@@ -71,6 +71,7 @@ architecture Behavioral of top_level is
     component bin2seg
         port (
             clear                  : in STD_LOGIC;
+            clk                    : in STD_LOGIC;
             bin_sec_unit           : in STD_LOGIC_VECTOR (3 downto 0);
             bin_sec_tens           : in STD_LOGIC_VECTOR (3 downto 0);
             bin_min_unit           : in STD_LOGIC_VECTOR (3 downto 0);
@@ -169,6 +170,7 @@ begin
     DISPLAY : bin2seg
         port map (
             clear                => BTNC,
+            clk                  => CLK100MHZ,
             bin_sec_unit         => sig_sec_unit,
             bin_sec_tens         => sig_sec_tens,
             bin_min_unit         => sig_min_unit,
