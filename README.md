@@ -1,19 +1,13 @@
 # DE1_semester_project
-Členové týmu
+# Členové týmu
 
     David Dobiáš - vedoucí týmu, hlavní programátor
     Tomáš Pokorný - pomocný programátor, poster maker
     Tomáš Rosa - pomocný programátor, video maker
 
-Abstract
+# Shrnutí projektu
 
-An abstract is a short summary of your project, usually about a paragraph (6-7 sentences, 150-250 words) long. A well-written abstract serves multiple purposes: (a) an abstract lets readers get the gist or essence of your project quickly; (b) an abstract prepares readers to follow the detailed information, description, and results in your report; (c) and, later, an abstract helps readers remember key points from your project.
-
-The main contributions of the project are:
-
-    ...
-    ...
-    ...
+Naším úkolem bylo implementovat herní časovač pro námi zvolený sport, společně s počítadlem průběžnéhho skóre. Pro náš projekt jsme si vybrali časovač určený pro hokej. Délka hokejového zápasu je rozdělana do tří třetin, přičemž každá třetina trvá dvacet minut, vytvořili jsme tedy časovač, který odpočítává vždy dvacet minut. Defaultní hodnota časovače je dvacet minut a časovač odčítá směrem dolů do té doby, než se dostane na čas nula. Během hry (zaplého časovače) lze časovač pozastavovat a opětovně pouštět na přerušení hry a zároveň lze přidávat body jednotlivým týmům. 
 
 [Photo(s) of your application with labels of individual parts.]
 
@@ -27,16 +21,16 @@ The main contributions of the project are:
 
 
 [Optional: Link to your short video presentation.]
-Hardware description of demo application
+# Hardware description of demo application
 
 Describe your implementation. Put a descriptive top-level schematic of your application.
-Software description
+# Software description
 
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in src and sim folders.
-Component(s) simulations
+# Component(s) simulations
 
 Write descriptive text and put simulation screenshots of components you created during the project.
-References
+# References
 
     Put here the references and online tools you used.
     ...
