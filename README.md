@@ -40,12 +40,12 @@ Put flowchats/state diagrams of your algorithm(s) and direct links to source/tes
 
 # Test bench - game_timer
 
-začátek času
+start time
 
 ![image](https://github.com/user-attachments/assets/2b1d12e3-590c-4a23-9931-89833953fc49)
 
 
-konec času
+end time
 
 ![image](https://github.com/user-attachments/assets/8cc6134e-7f44-4e99-8ee8-7297b065fa0e)
 
@@ -60,6 +60,18 @@ konec času
 # Test bench - score_counter
 
 ![image](https://github.com/user-attachments/assets/bd5bb028-3f0f-49eb-b3fe-aa30441edbc4)
+
+# Test bench - bin2seg
+
+signal anods
+
+![image](https://github.com/user-attachments/assets/06ac7403-d577-4ee3-9759-d6fe19150125)
+
+signal display
+
+![image](https://github.com/user-attachments/assets/14581442-afed-4af6-96d1-129429118d39)
+
+
 
 
 
