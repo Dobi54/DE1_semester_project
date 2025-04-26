@@ -37,6 +37,8 @@ Použité výstupy:
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in src and sim folders.
 # Component(s) simulations
 
+Velikost
+Velikost
 Test bench
 
 game_timer
