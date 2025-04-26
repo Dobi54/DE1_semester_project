@@ -38,7 +38,7 @@ Put flowchats/state diagrams of your algorithm(s) and direct links to source/tes
 
 
 # Test bench - game_timer
-•    Tato komponenta, má za úkol odpočítávat čas 20:00 směrem dolů až do času 00:00. Spínačem 'start_stop' ovládáme, jestli čas běží(log.1), nebo je zastavený (log.0). Zároveň když na signálu 'en' je vzestupná hrana, timer se spustí a čas běží.  Stistem tlačítka 'reset', přivedeme stav do defaultního času 20:00.
+•    Tato komponenta, má za úkol odpočítávat čas 20:00 směrem dolů až do času 00:00. Spínačem 'start_stop' ovládáme, jestli čas běží(log.1), nebo je zastavený (log.0). Pokud je 'start_stop' v log.1 a zároveň na signálu 'en' je vzestupná hrana, timer se spustí a čas běží.  Stistem tlačítka 'reset', přivedeme stav do defaultního času 20:00.
 
 •    Pokud čas běží, bude svítit zelená dioda. ('time_run v log.1')
 
