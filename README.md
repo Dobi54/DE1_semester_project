@@ -42,7 +42,8 @@ Put flowchats/state diagrams of your algorithm(s) and direct links to source/tes
 
 začátek času
 
-![image](https://github.com/user-attachments/assets/8e04f883-37b4-4525-a43e-88d864b27c28)
+![image](https://github.com/user-attachments/assets/2b1d12e3-590c-4a23-9931-89833953fc49)
+
 
 konec času
 
