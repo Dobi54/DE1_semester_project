@@ -37,17 +37,32 @@ Použité výstupy:
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in src and sim folders.
 # Component(s) simulations
 
-Velikost
-Velikost
-Test bench
 
-#game_timer
+# Test bench - game_timer
 
 začátek času
+
 ![image](https://github.com/user-attachments/assets/8e04f883-37b4-4525-a43e-88d864b27c28)
 
 konec času
-![image](https://github.com/user-attachments/assets/7916bc25-2086-4142-aac1-7d219f1ac48d)
+
+![image](https://github.com/user-attachments/assets/8cc6134e-7f44-4e99-8ee8-7297b065fa0e)
+
+# Test bench - clock_enable
+
+![image](https://github.com/user-attachments/assets/a5dc51df-c666-4ca1-ad01-afa8176fc6c2)
+
+# Test bench - position_counter
+
+![image](https://github.com/user-attachments/assets/fbb1e923-d7d1-4511-851b-5ef3be76bf25)
+
+# Test bench - score_counter
+
+![image](https://github.com/user-attachments/assets/bd5bb028-3f0f-49eb-b3fe-aa30441edbc4)
+
+
+
+
 
 
 Write descriptive text and put simulation screenshots of components you created during the project.
