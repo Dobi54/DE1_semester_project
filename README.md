@@ -37,6 +37,17 @@ Použité výstupy:
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in src and sim folders.
 # Component(s) simulations
 
+Test bench
+
+game_timer
+
+začátek času
+![image](https://github.com/user-attachments/assets/8e04f883-37b4-4525-a43e-88d864b27c28)
+
+konec času
+![image](https://github.com/user-attachments/assets/7916bc25-2086-4142-aac1-7d219f1ac48d)
+
+
 Write descriptive text and put simulation screenshots of components you created during the project.
 # References
 
