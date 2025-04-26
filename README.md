@@ -38,7 +38,8 @@ Put flowchats/state diagrams of your algorithm(s) and direct links to source/tes
 
 
 # Test bench - game_timer
-•    Tato komponenta, má za úkol odpočítávat čas 20:00 směrem dolů až do času 00:00. Spínačem 'start_stop' ovládáme, jestli čas běží (log.1), nebo je zastavený (log.0). Pokud je 'start_stop' v log.1 a zároveň na signálu 'en' je vzestupná hrana, timer se spustí a čas běží. Stistem tlačítka 'reset' přivedeme stav do defaultního času 20:00.
+
+•    Tato komponenta, má za úkol odpočítávat čas 20:00 směrem dolů až do času 00:00. Spínačem 'start_stop' ovládáme, jestli čas běží (log.1), nebo je zastavený (log.0). Pokud je 'start_stop' v log.1 a zároveň na signálu 'en' je vzestupná hrana, timer se spustí a čas běží. Stiskem tlačítka 'reset' přivedeme stav do defaultního času 20:00.
 
 •    Pokud čas běží, bude svítit zelená dioda. ('time_run v log.1')
 
@@ -58,7 +59,9 @@ end time
 # Test bench - clock_enable
 
 •    V této komponentě vytváříme z hlavního hodinového signálu 'clk', který má frekvenci 100MHz další dva pulzy.
+
 •    První signál 'clk1Hz' vytvoří impulz jednou za sekundu a používáme ho pro počítání času.
+
 •    Druhý signál 'clk2000Hz' slouží k rychlému přepínání mezi číslicemi na 7-segmentových displejích.
 
 clk1Hz
@@ -72,13 +75,31 @@ clk2000Hz
 
 # Test bench - position_counter
 
+•    Tato komponenta počítá pozice na displejích a říká, který se má zrovna rozsvítit. V jeden okamžik svítí pouze jeden displej, ale protože se pozice střídají velmi rychle, lidské oko tyto změny není schopné zaznamenat a vidí je, jakoby svítily všechny zároveň.
+
+•    Počítá opět jako v předchozí komponentě pouze tehdy, kdy 'en' je v náběžné hraně.
+
+•    Signál 'rst' slouží k nastavení do výchozí hodnoty a počítání znovu od hodnoty 7.
+
 ![image](https://github.com/user-attachments/assets/fbb1e923-d7d1-4511-851b-5ef3be76bf25)
 
 # Test bench - score_counter
 
+•    Tato komponenta počítá skóre obou týmů. Pokud stiskneme tlačítko 'BTNL' přijde impulz 'pointup_team1' a přičte se 1. Takto můžeme počítat až do cifry 99. Identicky to probíhá pro druhý tým s tlačítkem 'BTNR' s impulzem 'pointup_team2'.
+
+•    Tlačítkem 'BTND' resetujeme skóre (00:00) a přičítání bodů může probíhat od začátku.
+
 ![image](https://github.com/user-attachments/assets/bd5bb028-3f0f-49eb-b3fe-aa30441edbc4)
 
 # Test bench - bin2seg
+
+•    Komponenta 'bin2seg' řídí zobrazování číslic na osmi 7-segmentových displejích a podle signálu 'position' přepíná aktuální pozici (0-7) a vybere správnou číslici. Zobrazujeme na čtyřech displejích čas a na dalších čtyřech skóre.
+
+•    Dále musí převést vstupní signály z binárního čísla (4 bity) na BCD kód (7 bitů).
+
+•    Signál 'an' řídí anody diod, které budou zapnuté.
+
+•    Signál 'seg' řídí to, jaké číslo bude zobrazené (0-9).
 
 signal anods
 
@@ -92,10 +113,6 @@ signal display
 
 
 
-
-
-
-Write descriptive text and put simulation screenshots of components you created during the project.
 # References
 
     Put here the references and online tools you used.
