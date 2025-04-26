@@ -41,7 +41,7 @@ Velikost
 Velikost
 Test bench
 
-game_timer
+#game_timer
 
 začátek času
 ![image](https://github.com/user-attachments/assets/8e04f883-37b4-4525-a43e-88d864b27c28)
