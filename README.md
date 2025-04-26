@@ -51,7 +51,14 @@ end time
 
 # Test bench - clock_enable
 
+clk1Hz
+
 ![image](https://github.com/user-attachments/assets/a5dc51df-c666-4ca1-ad01-afa8176fc6c2)
+
+clk2000Hz
+
+![image](https://github.com/user-attachments/assets/04c009b0-687f-4153-8ea1-8267460569d4)
+
 
 # Test bench - position_counter
 
