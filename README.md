@@ -57,6 +57,10 @@ end time
 
 # Test bench - clock_enable
 
+•    V této komponentě vytváříme z hlavního hodinového signálu 'clk', který má frekvenci 100MHz další dva pulzy.
+•    První signál 'clk1Hz' vytvoří impulz jednou za sekundu a používáme ho pro počítání času.
+•    Druhý signál 'clk2000Hz' slouží k rychlému přepínání mezi číslicemi na 7-segmentových displejích.
+
 clk1Hz
 
 ![image](https://github.com/user-attachments/assets/a5dc51df-c666-4ca1-ad01-afa8176fc6c2)
