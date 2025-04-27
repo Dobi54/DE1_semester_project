@@ -10,7 +10,7 @@ entity clock_enable is
     );
     port (
         clk      : in  std_logic;  -- Main input clock (100 MHz)
-        rst      : in  std_logic;  -- Asynchronous reset
+        rst      : in  std_logic;  -- Reset
         clk1Hz   : out std_logic;  -- Output pulse at 1 Hz
         clk2000Hz  : out std_logic   -- Output pulse at 2000 Hz
     );
