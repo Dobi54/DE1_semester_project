@@ -1,0 +1,14 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sim_1/new/bin2seg_tb.vhd,1745653159,vhdl,,,,tb_bin2seg,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sim_1/new/clock_enable_tb.vhd,1745653159,vhdl,,,,cfg_tb_clock_enable;tb_clock_enable,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sim_1/new/game_timer_tb.vhd,1745657669,vhdl,,,,tb_game_timer,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sim_1/new/position_counter_tb.vhd,1745653159,vhdl,,,,tb_position_counter,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sim_1/new/score_counter_tb.vhd,1745653160,vhdl,,,,tb_score_counter,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/imports/Downloads/bin2seg.vhd,1745653160,vhdl,,,,bin2seg,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/imports/Downloads/clock_enable.vhd,1745653160,vhdl,,,,clock_enable,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/new/game_timer.vhd,1745657547,vhdl,,,,game_timer,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/new/position_counter.vhd,1745653160,vhdl,,,,position_counter,,,,,,,,
+C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/new/score_counter.vhd,1745653160,vhdl,,,,score_counter,,,,,,,,
