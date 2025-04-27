@@ -9,7 +9,7 @@
 
 Naším úkolem bylo implementovat herní časovač pro námi zvolený sport, společně s počítadlem průběžnéhho skóre. Pro náš projekt jsme si vybrali časovač určený pro hokej. Délka hokejového zápasu je rozdělana do tří třetin, přičemž každá třetina trvá dvacet minut, vytvořili jsme tedy časovač, který odpočítává vždy dvacet minut. Defaultní hodnota časovače je dvacet minut a časovač odčítá směrem dolů do té doby, než se dostane na čas nula. Během hry (zaplého časovače) lze časovač pozastavovat a opětovně pouštět na přerušení hry a zároveň lze přidávat body jednotlivým týmům. Po uplynutí jedné třetiny lze čas opět vyresetovat na defaultní hodnotu a pokračovat novou třetinou. Zároveň je zde pomocí LED diod zobrazena indikace aktuální herní situace, tedy zda se zrovna hraje, nebo zda je hra přerušena, nebo zda skončila daná třetina. Implementace probíhala ve vývojovém prostředí Vivado pro desku Nexys A7-50T.
 
-Video Video.mp4
+Video https://github.com/Dobi54/DE1_semester_project/blob/main/Video.mp4
 
 # Popis Hardwaru naší implemantace
 
@@ -35,10 +35,18 @@ Použité výstupy:
 ![Diagram_Final drawio](https://github.com/user-attachments/assets/cb55c96e-043b-4845-b9bf-1b584d4af58c)
 
 
-# Software description
+# Naše komponenty
+game_timer            https://github.com/Dobi54/DE1_semester_project/blob/main/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/new/game_timer.vhd
 
-Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in src and sim folders.
+clock_enable            https://github.com/Dobi54/DE1_semester_project/blob/main/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/imports/Downloads/clock_enable.vhd
 
+position_counter        https://github.com/Dobi54/DE1_semester_project/blob/main/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/new/position_counter.vhd
+
+score_counter            https://github.com/Dobi54/DE1_semester_project/blob/main/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/new/score_counter.vhd
+
+bin2seg                    https://github.com/Dobi54/DE1_semester_project/blob/main/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/imports/Downloads/bin2seg.vhd
+
+top_level                https://github.com/Dobi54/DE1_semester_project/blob/main/Digital_scoreboard/Digital_scoreboard.srcs/sources_1/new/top_level.vhd
 
 # Test bench - game_timer
 
@@ -116,7 +124,12 @@ signal display
 
 
 
-# References
+# Použité nástroje
 
-    Put here the references and online tools you used.
-    ...
+Vývojové prostředí Vivado 2020
+
+Online nástroj pro generování základu testbenche https://vhdl.lapinoo.net/
+
+Umělá inteligence ChatGPT
+
+Dále jsme využili komponenty, které jsme používali během semestru
