@@ -29,7 +29,8 @@ Použité výstupy:
     LED17_G - RGB LED pro signalizaci probíhající hry (zelená barva)
     LED17_B - RGB LED pro signalizaci pozastavené hry (modrá barva)
 
-![Diagram_Final drawio](https://github.com/user-attachments/assets/187ea8ff-6f10-46ee-aa2e-ab74308ccea0)
+    
+![Diagram_Final drawio](https://github.com/user-attachments/assets/cb55c96e-043b-4845-b9bf-1b584d4af58c)
 
 
 # Software description
