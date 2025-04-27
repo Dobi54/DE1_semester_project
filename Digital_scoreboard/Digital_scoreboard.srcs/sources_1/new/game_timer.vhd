@@ -6,7 +6,7 @@ entity game_timer is
     Port (
         start_stop    : in  STD_LOGIC;  -- Input signal to start or stop the timer
         clk           : in  STD_LOGIC;  -- Clock input
-        reset         : in  STD_LOGIC;  -- Asynchronous reset
+        reset         : in  STD_LOGIC;  -- Reset
         en            : in  STD_LOGIC;  -- Enable signal for timer update
         time_run      : out STD_LOGIC;  -- Output indicating that the timer is running
         time_pause    : out STD_LOGIC;  -- Output indicating that the timer is paused
@@ -49,16 +49,16 @@ begin
 
             -- Detect rising edge on enable signal
             else
-				if en = '1' and en_last = '0' then
-					-- Change running state based on start_stop input
-					if start_stop = '1' then
-						running <= '1';  -- Start the timer
-						pause <= '0';
-					else
-						running <= '0';  -- Pause the timer
-						pause <= '1';
-					end if;
-				end if;	
+		if en = '1' and en_last = '0' then
+			-- Change running state based on start_stop input
+			if start_stop = '1' then
+				running <= '1';  -- Start the timer
+				pause <= '0';
+			else
+				running <= '0';  -- Pause the timer
+				pause <= '1';
+			end if;
+		end if;	
 
                 -- Proceed with countdown if timer is running and not finished
                 if running = '1' and en = '1' then
