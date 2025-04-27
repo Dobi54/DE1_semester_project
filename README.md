@@ -2,7 +2,7 @@
 # Členové týmu
 
     David Dobiáš - vedoucí týmu, hlavní programátor
-    Tomáš Pokorný - pomocný programátor, poster maker
+    Tomáš Pokorný - pomocný programátor, readme maker
     Tomáš Rosa - pomocný programátor, video maker
 
 # Shrnutí projektu
