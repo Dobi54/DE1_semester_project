@@ -6,7 +6,7 @@ entity position_counter is
     Port (
         clk      : in  STD_LOGIC;                    -- Clock input
         en       : in  STD_LOGIC;                    -- Enable input for counting
-        rst      : in  STD_LOGIC;                    -- Asynchronous reset
+        rst      : in  STD_LOGIC;                    -- Reset
         position : out STD_LOGIC_VECTOR (2 downto 0) -- 3-bit output representing the current position
     );
 end position_counter;
