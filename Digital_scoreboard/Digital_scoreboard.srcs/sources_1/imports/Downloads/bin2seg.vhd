@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity bin2seg is
     Port (
         clk                   : in STD_LOGIC;  -- Clock signal for synchronization
-        clear                 : in STD_LOGIC;  -- Asynchronous clear signal
+        clear                 : in STD_LOGIC;  -- Reset
         bin_sec_unit          : in STD_LOGIC_VECTOR (3 downto 0); -- Seconds (units digit)
         bin_sec_tens          : in STD_LOGIC_VECTOR (3 downto 0); -- Seconds (tens digit)
         bin_min_unit          : in STD_LOGIC_VECTOR (3 downto 0); -- Minutes (units digit)
