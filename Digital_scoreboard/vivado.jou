@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Apr 26 21:00:27 2025
+# Process ID: 18444
+# Current directory: C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19204 C:\Users\tomro\OneDrive\Plocha\Digital_scoreboard\Digital_scoreboard.xpr
+# Log file: C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard/vivado.log
+# Journal file: C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard/Digital_scoreboard.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run impl_1
+
+reset_run synth_1

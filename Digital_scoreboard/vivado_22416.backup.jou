@@ -1,0 +1,135 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Apr 26 09:39:32 2025
+# Process ID: 22416
+# Current directory: C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25788 C:\Users\pokor\Desktop\Digital_komplet\Digital_komplet\Digital_scoreboard\Digital_scoreboard.xpr
+# Log file: C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/vivado.log
+# Journal file: C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/pokor/Desktop/Digital_komplet/Digital_komplet/Digital_scoreboard/Digital_scoreboard.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_game_timer.tcl
+run 0.0000012 s
+run 0.0000012 s
+run 0.0000012 s
+run 0.0000012 s
+run 0.0000012 s
+run 0.0000012 s
+run 0.0000012 s
+run 0.0000012 s
+run 0.0000012 s
+run 0.0000012 s
+close_sim
+launch_simulation
+source tb_game_timer.tcl
+run 0.0000012 s
+run 0.000005 s
+run 0.000005 s
+run 0.000005 s
+run 0.000005 s
+run 0.000005 s
+run 0.000005 s
+run 0.000005 s
+run 0.000005 s
+run 0.00008 s
+run 0.00008 s
+run 0.00008 s
+run 0.18 s
+relaunch_sim
+run 0.18 s
+run 0.5 s
+relaunch_sim
+run 0.5 s
+close_sim
+launch_simulation
+source tb_game_timer.tcl
+run 0.5 s
+relaunch_sim
+relaunch_sim
+run 0.5 s
+relaunch_sim
+run 0.5 s
+relaunch_sim
+run 0.5 s
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top cfg_tb_clock_enable [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source cfg_tb_clock_enable.tcl
+run 0.5 s
+run 0.5 s
+run 0.5 s
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_bin2seg [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_bin2seg.tcl
+run 0.5 s
+run 0.5 s
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_position_counter [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_position_counter.tcl
+run 0.5 s
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_score_counter [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_score_counter.tcl
+run 0.5 s
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_bin2seg [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_bin2seg.tcl
+close_sim
+launch_simulation
+source tb_bin2seg.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top cfg_tb_clock_enable [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source cfg_tb_clock_enable.tcl
+run 0.5 s
+close_sim

@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Apr 26 21:00:27 2025
+# Process ID: 18444
+# Current directory: C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19204 C:\Users\tomro\OneDrive\Plocha\Digital_scoreboard\Digital_scoreboard.xpr
+# Log file: C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard/vivado.log
+# Journal file: C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard/Digital_scoreboard.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/tomro/OneDrive/Obrázky/Digital_komplet/Digital_scoreboard' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard/Digital_scoreboard.gen/sources_1', nor could it be found using path 'C:/Users/tomro/OneDrive/Obrázky/Digital_komplet/Digital_scoreboard/Digital_scoreboard.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/tomro/OneDrive/Plocha/Vivado/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:54 ; elapsed = 00:00:30 . Memory (MB): peak = 1001.090 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sat Apr 26 21:02:01 2025] Launched synth_1...
+Run output will be captured here: C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard/Digital_scoreboard.runs/synth_1/runme.log
+[Sat Apr 26 21:02:01 2025] Launched impl_1...
+Run output will be captured here: C:/Users/tomro/OneDrive/Plocha/Digital_scoreboard/Digital_scoreboard.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1019.414 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1693.449 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1693.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1693.449 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 1829.535 ; gain = 828.445
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 26 21:05:36 2025...
